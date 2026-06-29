@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="game-box">
+
+        <!-- Main Menu -->
+        <div id="menu">
+
+            <h2>Select Game Mode</h2>
+
+            <button onclick="startTwoPlayer()">
+                👥 Two Players
+            </button>
+
+            <br><br>
+
+            <button onclick="showDifficulty()">
+                🤖 Vs Computer
+            </button>
+
+        </div>
+
+
+        <!-- Difficulty Menu -->
+        <div id="difficultyMenu" style="display:none;">
+
+            <h2>Select Difficulty</h2>
+
+            <button onclick="startComputer('easy')">
+                🟢 Easy
+            </button>
+
+            <br><br>
+
+            <button onclick="startComputer('moderate')">
+                🟡 Moderate
+            </button>
+
+            <br><br>
+
+            <button onclick="startComputer('impossible')">
+                🔴 Impossible
+            </button>
+
+            <br><br>
+
+            <button onclick="backToMenu()">
+                ⬅ Back
+            </button>
+
+        </div>
+
+
+        <!-- Game -->
+        <div id="game" style="display:none;">
+
+            <h1>🎮 Tic Tac Toe</h1>
+
+            <h2 id="score">
+                X Wins : 0 | O Wins : 0 | Draws : 0
+            </h2>
+
+            <h3 id="turn">
+                Current Turn : X
+            </h3>
+
+            <table border="1" cellspacing="0">
+
+                <tr>
+                    <td id="b1" onclick="play(this)"></td>
+                    <td id="b2" onclick="play(this)"></td>
+                    <td id="b3" onclick="play(this)"></td>
+                </tr>
+
+                <tr>
+                    <td id="b4" onclick="play(this)"></td>
+                    <td id="b5" onclick="play(this)"></td>
+                    <td id="b6" onclick="play(this)"></td>
+                </tr>
+
+                <tr>
+                    <td id="b7" onclick="play(this)"></td>
+                    <td id="b8" onclick="play(this)"></td>
+                    <td id="b9" onclick="play(this)"></td>
+                </tr>
+
+            </table>
+
+            <div id="winLine"></div>
+
+            <br>
+
+            <button onclick="restartGame()">
+                🔄 Restart Game
+            </button>
+            <br><br>
+            <button onclick="backToDifficulty()">
+            ⬅ Change Difficulty
+             </button>
+
+            <br><br>
+
+            <button onclick="goToMenu()">
+                🏠 Main Menu
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
